@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: Avenir-Medium;
+  src: url(../fonts/Avenir-Medium.ttf);
+}
+@font-face {
+  font-family: Avenir book;
+  src: url(../fonts/Avenir-Book.ttf);
+}
+@font-face {
+  font-family: Avenir heavy;
+  src: url(../fonts/Avenir-Heavy.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex-sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gs-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.gsmainscreen {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gsmainscreen__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.gssection {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.88);
+  -webkit-box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.06), -8px 8px 47px 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.06), -8px 8px 47px 5px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  max-width: 525px;
+  width: 100%;
+  padding: 35px 33px;
+  margin-top: -100px;
+}
+.gssection h1 {
+  margin: 0 0 5px 0;
+  color: #282828;
+  font-family: Avenir heavy;
+  font-size: 49px;
+  line-height: 67px;
+}
+.gssection p {
+  margin-bottom: 19px;
+  font-family: Avenir-Medium;
+  font-size: 16px;
+  line-height: 150%;
+  color: #414141;
+}
+.gssection p:last-child {
+  margin-bottom: 0;
+}
+.gssection p.boldtext {
+  font-family: Avenir heavy;
+  font-size: 17px;
+  color: #353535;
+}
+.gssection .gssection__openmodwrap {
+  margin-top: 19px;
+}
+
+.gssection__openmodwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gssection__openmodwrap .followingbox {
+  max-width: 139px;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 139px;
+          flex: 0 0 139px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.06), -8px 8px 47px 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.06), -8px 8px 47px 5px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 17px 13px;
+  min-height: 136px;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1.5px solid #fff;
+  cursor: pointer;
+}
+.gssection__openmodwrap .followingbox:hover {
+  border-color: #D74101;
+}
+.gssection__openmodwrap .followingbox p {
+  margin: 0;
+  color: #3F3F3F;
+  font-size: 16px;
+  line-height: 120%;
+  font-family: Avenir-Medium;
+}
+.gssection__openmodwrap .followingbox img {
+  margin-bottom: 9px;
+  max-width: 100%;
+  max-height: 52px;
+}
+
+.gsmodalwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  display: none;
+}
+
+.gsmodal {
+  max-width: 920px;
+  width: 100%;
+  padding: 58px 125px 80px;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+}
+
+.gsmodal__header {
+  text-align: center;
+}
+.gsmodal__header img {
+  margin-bottom: 23px;
+}
+.gsmodal__header p {
+  color: #252525;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 28px;
+  margin: 0 0 15px 0;
+}
+
+.gsmodal__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -13px;
+  margin-right: -13px;
+}
+
+.gsjustify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gsmodal__col {
+  width: 100%;
+  max-width: 33.333%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-top: 29px;
+}
+
+.gsmodal__close {
+  position: absolute;
+  right: 35px;
+  top: 43px;
+  border: none;
+  padding: 0;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.gsmodal__close:hover {
+  opacity: 0.7;
+}
+
+.gsmodal__back {
+  position: absolute;
+  top: 38px;
+  left: 31px;
+  display: inline-block;
+  padding-left: 26px;
+  color: #D14200;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: Avenir-Medium;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.gsmodal__back img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.gsmodal__back:hover {
+  opacity: 0.8;
+}
+.gsmodal__back:hover img {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+.gsmodal__back img {
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  margin-top: -3px;
+}
+
+.gsmodal__icbox {
+  border: 1.5px solid #fff;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 3px 13px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 3px 13px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px 19px 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 163px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.gsmodal__icbox:hover {
+  border-color: #D74101;
+}
+.gsmodal__icbox img {
+  width: 52px;
+  height: 52px;
+}
+.gsmodal__icbox p {
+  margin: 0;
+  color: #464646;
+  font-size: 18px;
+  line-height: 120%;
+  font-family: Avenir-Medium;
+}
+
+.gsmodalwrapper.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1199.8px) {
+  .gssection {
+    margin-top: 0;
+  }
+  .gsmainscreen {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 991.8px) {
+  .gs-container {
+    padding: 0 40px;
+  }
+  .gssection {
+    padding: 20px 25px;
+  }
+  .gssection h1 {
+    font-size: 36px;
+  }
+  .gsmainscreen {
+    padding: 70px 0;
+    min-height: initial;
+  }
+  .gsmodal {
+    max-width: 700px;
+    padding: 50px 65px 50px;
+  }
+  .gsmodal__icbox p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767.8px) {
+  .gsmodal {
+    max-width: 460px;
+    padding: 50px;
+  }
+  .gsmodal__close {
+    right: 25px;
+    top: 25px;
+  }
+  .gsmodal__back {
+    padding-left: 0;
+    top: 25px;
+  }
+  .gsmodal__header p {
+    font-size: 18px;
+  }
+  .gsmodal__header img {
+    margin-bottom: 15px;
+  }
+  .gsmodal__col {
+    max-width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+}
+@media (max-width: 575.8px) {
+  .gsmainscreen {
+    padding: 45px 0;
+  }
+  .gs-container {
+    padding: 0 15px;
+  }
+  .gssection__openmodwrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .gssection h1 {
+    font-size: 24px;
+    line-height: 140%;
+  }
+  .gssection__openmodwrap .followingbox {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    width: 100%;
+    min-height: initial;
+    margin-bottom: 10px;
+  }
+  .gssection__openmodwrap .followingbox img {
+    width: 44px;
+    height: 44px;
+  }
+  .gsmodal {
+    max-width: calc(100% - 30px);
+    padding: 50px 30px;
+  }
+  .gsmodal__row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .gsmodal__col {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 15px;
+  }
+  .gsmodal__icbox {
+    height: auto;
+    min-height: 150px;
+  }
+  .gsmodal__icbox img {
+    width: 48px;
+    height: 48px;
+  }
+  .gsmodal__header img {
+    max-width: 120px;
+  }
+  .gsmodal__back {
+    padding-left: 0;
+    top: 20px;
+    left: 15px;
+    font-size: 16px;
+  }
+}

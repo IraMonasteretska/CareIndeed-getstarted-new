@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face{font-family:Avenir-Medium;src:url(../fonts/Avenir-Medium.ttf)}
+@font-face{font-family:Avenir book;src:url(../fonts/Avenir-Book.ttf)}
+@font-face{font-family:Avenir heavy;src:url(../fonts/Avenir-Heavy.ttf)}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.flex-sect {
+    display: flex;
+    justify-content: flex-end;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
